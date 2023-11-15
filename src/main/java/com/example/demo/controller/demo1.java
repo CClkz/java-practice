@@ -8,6 +8,7 @@ public class demo1 {
 
     @GetMapping("/hello")
     public String hello(@RequestParam(value = "name1",required = false) String name){
+        System.out.println(name);
         return "hello " + name;
     }
 
@@ -15,6 +16,11 @@ public class demo1 {
     @GetMapping("/hello/**")
     public String getHello1(String name) {
         return "hello ** " + name;
+    }
+
+    @GetMapping("/user/info")
+    public String userinfo(){
+        return "get userInfo";
     }
 
     @PostMapping("/hello")
@@ -35,4 +41,5 @@ public class demo1 {
         System.out.println(user);
         return "post /hello2 User body";
     }
+
 }
