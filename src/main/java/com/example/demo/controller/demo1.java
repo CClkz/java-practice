@@ -18,11 +18,6 @@ public class demo1 {
         return "hello ** " + name;
     }
 
-    @GetMapping("/user/info")
-    public String userinfo(){
-        return "get userInfo";
-    }
-
     @PostMapping("/hello")
     public String hello(String password, String name) {
         System.out.println("name:" + name);
