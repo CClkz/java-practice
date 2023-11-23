@@ -1,15 +1,25 @@
 package com.example.demo.entity;
 
 public class User {
-    private String name;
+    private int id;
+    private String username;
     private String password;
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+
     public String getName(){
-        return name;
+        return username;
     }
 
     public void setName(String _name){
-        this.name = _name;
+        this.username = _name;
     }
 
     public String getPassword(){
@@ -22,8 +32,11 @@ public class User {
     }
 
     @Override
-    public String toString(){
-        return "Use{name=" + name + ",password=" + password + "}";
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                '}';
     }
-
 }

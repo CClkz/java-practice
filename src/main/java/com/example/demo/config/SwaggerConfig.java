@@ -31,8 +31,8 @@ public class SwaggerConfig {
      */
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("演示项目API") // 标题
-                .description("演示项目") // 描述
+                .title("Boot Practice API") // 标题
+                .description("学习上手") // 描述
                 .version("1.0") // 版本
                 .build();
     }
