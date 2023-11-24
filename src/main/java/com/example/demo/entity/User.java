@@ -1,7 +1,16 @@
 package com.example.demo.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+
+@TableName("user")
 public class User {
-    private int id;
+    @TableId(value = "id", type = IdType.AUTO)
+    private Integer id;
+
+    @TableField(value = "username", exist = true) // 此处为表里面的名称
     private String username;
     private String password;
 
@@ -21,11 +30,11 @@ public class User {
         this.username = username;
     }
 
-    public String getPassword(){
+    public String getPassword() {
         return password;
     }
 
-    public void setPassword(String _password){
+    public void setPassword(String _password) {
 
         this.password = _password;
     }

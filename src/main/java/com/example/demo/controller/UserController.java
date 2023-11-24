@@ -41,9 +41,9 @@ public class UserController {
 
     @PostMapping("/user")
     public String save(@RequestBody User user) {
-        System.out.println(user);
-        int count = userMapper.insert(user);
-        System.out.println("count:" + count);
+        System.out.println("1" + user);
+        int count = plusUserMapper.insert(user);
+        System.out.println("2" + user);
         if (count > 0) {
             return "添加用户成功";
         } else {
