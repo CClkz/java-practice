@@ -13,13 +13,12 @@ public class User {
         this.id = id;
     }
 
-
-    public String getName(){
+    public String getUsername() {
         return username;
     }
 
-    public void setName(String _name){
-        this.username = _name;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword(){

@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import com.example.demo.entity.User;
+import com.example.demo.mapper.PlusUserMapper;
 import com.example.demo.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -14,11 +15,15 @@ public class UserController {
     @Autowired
     private UserMapper userMapper;
 
+    @Autowired
+    private PlusUserMapper plusUserMapper;
+
     //    查询数据库
     @GetMapping("user")
     public List query() {
 
-        List<User> list = userMapper.findAll();
+//        List<User> list = userMapper.findAll();
+        List<User> list = plusUserMapper.selectList(null);
         System.out.println("list:" + list);
         return list;
     }
