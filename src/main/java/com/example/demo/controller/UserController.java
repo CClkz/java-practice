@@ -19,12 +19,19 @@ public class UserController {
     private PlusUserMapper plusUserMapper;
 
     //    查询数据库
-    @GetMapping("user")
+    @GetMapping("/user")
     public List query() {
 
 //        List<User> list = userMapper.findAll();
         List<User> list = plusUserMapper.selectList(null);
         System.out.println("list:" + list);
+        return list;
+    }
+
+    @GetMapping("/user/findAll")
+    public List queryUsersWithOrder() {
+        List<User> list = plusUserMapper.selectAllUserWithOrders();
+        System.out.println("findAll list :" + list);
         return list;
     }
 
