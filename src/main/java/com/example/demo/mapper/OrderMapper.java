@@ -17,7 +17,7 @@ public interface OrderMapper extends BaseMapper<Order> {
     @Select("select * from t_order")
     @Results({
             @Result(column = "id", property = "id"),
-            @Result(column = "time", property = "time"),
+            @Result(column = "order_time", property = "orderTime"),
             @Result(column = "total", property = "total"),
             @Result(column = "uuid", property = "uuid"),
             @Result(column = "uuid", property = "user", javaType = User.class,

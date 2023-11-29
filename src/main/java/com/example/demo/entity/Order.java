@@ -14,7 +14,7 @@ public class Order {
     /**
      * 订单时间
      */
-    private String time;
+    private String orderTime;
     /**
      * 订单总数
      */
@@ -35,12 +35,12 @@ public class Order {
         this.id = id;
     }
 
-    public String getTime() {
-        return time;
+    public String getOrderTime() {
+        return orderTime;
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    public void setOrderTime(String orderTime) {
+        this.orderTime = orderTime;
     }
 
     public int getTotal() {
@@ -71,7 +71,7 @@ public class Order {
     public String toString() {
         return "Order{" +
                 "id=" + id +
-                ", time=" + time +
+                ", order_time=" + orderTime +
                 ", total=" + total +
                 ", uuid=" + uuid +
                 '}';
